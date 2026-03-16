@@ -9,6 +9,7 @@ jobs:
         run: echo "Hi," >> about-tif.txt
       - uses: actions/upload-artifact@v7.0.0
         with:
+          name: 'about'
           path: about.tif.txt
           retention-days: 10 #Default 90 days
   JOB_2:

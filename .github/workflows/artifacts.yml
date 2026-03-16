@@ -1,13 +1,12 @@
 name: artifacts
-on:
-  workflow_dispatch:
+on: [ push ]
 jobs:
   JOB_1:
     name: Upload Artifact
     runs-on: ubuntu-latest
     steps:
       - name: 'Create a local file'
-        run: echo "Hi,"
+        run: echo "Hi," >> about-tif.txt
       - uses: actions/upload-artifact@v7.0.0
         with:
           path: about.tif.txt

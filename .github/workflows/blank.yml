@@ -24,4 +24,4 @@ jobs:
           echo "testvar ${{env.testvar}}"
         env:
           First_Name: Subscribers
-          testvars: value-step
+          testvar: value-step

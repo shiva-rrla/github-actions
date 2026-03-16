@@ -14,7 +14,7 @@ jobs:
 
     env:
       Greeting: Hello
-      testvar: value-job
+#      testvar: value-job
 
     steps:
       - name: 'Print-values-of-env-vars'
@@ -24,4 +24,4 @@ jobs:
           echo "testvar ${{env.testvar}}"
         env:
           First_Name: Subscribers
-          testvar: value-step
+#          testvar: value-step

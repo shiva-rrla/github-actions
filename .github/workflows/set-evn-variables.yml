@@ -2,6 +2,9 @@ name: 'Custom GITHUB_ENV Var'
 
 on: workflow_dispatch
 
+env:
+  MY_PASSWORD: 123tilkjljdsfa@123
+
 jobs:
   custom_GITHUB_ENV:
     runs-on: ubuntu-latest

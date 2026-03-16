@@ -13,8 +13,10 @@ jobs:
         id: var_source_step
         run: |
           echo "Performing a random task"
-          echo "::set-output name=var1_name::TechITFactory"
-          echo "::set-output name=var2_name::$(date + '%Y-%m-%d-%H-%M')"
+#          echo "::set-output name=var1_name::TechITFactory"
+#          echo "::set-output name=var2_name::$(date + '%Y-%m-%d-%H-%M')"
+          echo "var1_name=TechITFactory" >> $GITHUB_OUTPUT
+          echo "var2_name=$(date + '%Y-%m-%d-%H-%M')" >> $GITHUB_OUTPUT
       - name: Get-Variable-Value
         run: |
           echo "Printing the values"

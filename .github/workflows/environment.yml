@@ -1,0 +1,14 @@
+name: environment
+on: [push]
+
+jobs:
+  deployemnt:
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: https://producion.com
+    steps:
+      - name: 'Print secret from environment'
+        run: |
+          echo "APP_SECRET: ${{secrets.APP_SECRET}}"
+          echo "APP_ENV_V: ${{env.APP_ENV_V}}
